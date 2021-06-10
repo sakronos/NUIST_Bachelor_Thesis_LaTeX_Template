@@ -41,5 +41,5 @@
 > > 10. 图片编号与图片标题间的分隔符设置为空格
 
 ## 致谢
-1. [南京信息工程大学本科学位论文模板](!https://github.com/LirenW/NUIST_thesis_template_V2.0)
+1. [南京信息工程大学本科学位论文模板](https://github.com/LirenW/NUIST_thesis_template_V2.0)
 2. [南京信息工程大学LaTeX毕业论文模板V3.1](https://latexstudio.net/index/details/index/mid/1524.html)
