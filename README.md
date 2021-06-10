@@ -3,6 +3,8 @@
 
 这是一份南京信息工程大学本科生毕业论文LaTeX模板，请使用XeLaTeX编译。**友善提醒：本文档是非官方版**
 
+本Repository是对[NUIST_thesis_template_V2.0](https://github.com/LirenW/NUIST_thesis_template_V2.0)进行修订。
+
 ## 推荐使用环境
 1. Windows 10
 2. TeX Live 2021
@@ -13,7 +15,7 @@
 │  bibliography.bib                                     # 使用BibTeX格式化的参考列表
 │  clean.bat                                            
 │  LICENSE                                              
-│  nuist.cls                                            # 样式文件
+│  nuist.cls                                            # 样式文件x
 │  NUIST_thesis.bbl
 │  NUIST_thesis.listing
 │  NUIST_thesis.pdf
