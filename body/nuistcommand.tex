@@ -1,0 +1,117 @@
+\section{NUIST模板介绍}
+
+\subsection{适合人群}
+所有对\LaTeX 感兴趣的南京信息工程大学本科毕业生。
+
+由于使用者可能有一些个人化的需求，本模板可能要求使用者愿意通过搜索引擎等方式解决该问题。
+
+\subsection{使用环境}
+由于现在 \XeTeX 排版引擎已经比较成熟，所以这里采用 \XeLaTeX{} 和 \CTeX{} 宏集解决中英文混排问题。
+
+本模板的推荐使用环境为：
+\begin{enumerate}[1、]
+    \item Windows 10
+    \item TeX Live 最新发行版全量安装（2020和2021可以正常编译）
+    \item Visual Studio Code 和 Visual Studio Code LaTeX Workshop Extension (作者为 James Yu)
+\end{enumerate}
+
+请使用\XeLaTeX{} 编译本模板。如果在Visual Studio Code加插件环境下使用本模板，只需保留 NUIST\_thesis.tex 文件第一行“\% !TeX program  = XeLaTeX”，程序将使用XeLaTeX 命令排版文档。
+
+\subsection{字体}
+模板使用宋体、黑体、Times New Roman和楷体。根据2021.6版修订者的经历，建议使用Windows系统下的中易字库（SimSun、SimHei、SimKai）和Times New Roman。笔者一开始使用的是思源宋体（Source Han Serif），但论文打印稿被答辩老师一眼看出使用的不是常见的宋体……
+
+虽然Windows 系统自带的中易字库没有加粗字型，好在根据学校的要求，通篇论文只有封面页用到了加粗字型，所以用 AutoFakeBold 足矣。
+
+因此，笔者建议 Linux 用户和 Mac OS 用户请自行安装中易字库（Times New Roman 倒是很容易安装，Arch Linux下直接有包 \url{https://aur.archlinux.org/packages/ttf-ms-fonts/}），相信这对各位来说不是什么难事。
+
+\subsection{文档类的选取}
+
+模版的文档类是基于\CTeX{} 宏集中自带的ctexart文档类来实现的\cite{x5}，当然，还用到了一些常用的宏包，编译时要保证自己的系统中已经安装好了这些宏包，如果用户使用的是全量安装的 TeX Live就没有问题。
+
+\subsection{参考文献编译方式}
+模板推荐使用\verb|\bibliography{}|命令处理参考文献，使用该方法可能比thebibliography难以上手些，但是借助“GB/T 7714—2015 BibTeX Style”\cite{x6}，模板使用者可以放心大胆地将参考文献的排版工作交给\LaTeX ，而无需手动调整每条参考文献的格式\footnote{虽然学校规范上写的是根据GB/T 7714—2005，但是\url{https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style}这个宏包使用起来有不少问题，而且需要自行安装。在2021.6版修订者的工作中发现GB/T 7714—2015 BibTeX Style能够胜任这个工作，因此选择这个宏包。}。
+
+考虑到使用者可能更习惯thebibliography，模板仍保留了之前版本的thebibliography代码，使用者需要将GB/T 7714-2015相关的代码删除，并取消thebibliography相关代码的注释以重新启用它。
+
+\section{模板中命令的使用方法}
+
+\subsection{分级标题}
+模板各级标题的命令如表~\ref{table_title_command}~所示：
+\begin{table}[htbp!]
+    \centering
+    \caption{分级标题命令}\label{table_title_command}
+    
+    \begin{tabular}{ccccc}
+    \whline 
+    命令 & \verb|\section|&\verb|\subsection|&\verb|\subsubsection|&\verb|\forthsection| \\ 
+    \hline 
+    作用 & 一级标题&二级标题&三级标题&四级标题 \\ 
+    \whline 
+    \end{tabular}
+\end{table}
+
+虽然学校排版规范最低允许四级标题，但是ctexart文档类的自动编号应该只支持到三级标题，因此四级标题需要自行编号。
+
+\subsection{NUIST模板中新定义命令介绍}
+这里一一介绍下NUIST本科论文模板中的新定义的命令：
+{\color{blue}
+\begin{enumerate}
+\item \verb|\cover|，用于生成论文封面内容和声明页；
+\item \verb|\mytableofcontents|，用于生成目录页内容；
+\item \verb|\maketitleofchinese|，用于生成中文标题、姓名及单位信息
+\item \verb|\maketitleofenglish|，用于生成英文文标题、姓名及单位信息
+\item \verb|\abstractofchinses|，用于生成中文摘要；
+\item \verb|\abstractofenglish|，用于生成英文摘要；
+\item \verb|\thanking|，用于生成致谢部分的标题；
+\item \verb|\forthsection|，生成四级标题，需要自行编号，形如（1）、（2）……（或1.1.1.1、2.1.1.1……）
+\end{enumerate}
+}
+
+
+\subsection{命令用法详解}
+\LaTeX/\TeX 中的命令都是以$\backslash$（下划线）开始的。命令又分为两种，一种是无参数命令，起声明和执行特定任务作用；另一种 是有参数命令。带参命令的参数又有两种类型一种是可选参数（用[ ]来框住，可省略该项参数），另一种是必选参数（用\{ \}来框住）。
+
+本模板中自定义的命令有只有一个是不带参的命令，即\verb|\mytableofcontents|，其余都是带参命令。
+
+\subsubsection{带参命令用法}
+\verb|\cover|\{val1\}\{val2\}\{val3\}\{val4\}\{val5\}\{val6\}\{val7\}这里val1-val6分别表示填入的信息依次为：val1 =论文题目，val2 =姓名，val3 =学号，val4 =学院，val5 =专业，val6 =导师，val7 =年月日。例如如下代码，就生成了本说明文档的封面。
+
+{\color{green!50!black}
+\begin{lstlisting}[breaklines=true,]
+\cover{南京信息工程大学本科生毕业论文\LaTeX 模板 \\Version $2021.6$}
+{路人甲}
+{20170000888}
+{\LaTeX 学院}
+{某专业}
+{路人乙}
+{二Ｏ二一\hspace{0.4em} 年\hspace{0.4em} 六\hspace{0.4em} 月\hspace{0.4em} 五\hspace{0.4em} 日}    %论文格式要求指导老师不用加职称
+\end{lstlisting}
+}
+那接下来看看剩下的几个命令的参数数量及参数所对应的内容是什么：
+{\color{blue}
+\begin{itemize}
+\item \verb|\mytableofcontents|，无参数命令
+\item \verb|\maketitleofchinese|\{论文标题\}\{姓名\}\{学院\}
+\item \verb|\maketitleofenglish|\{英文标题\}\{英文姓名或拼音\}\{学院\}
+\item \verb|\abstractofchinses|\{中文摘要内容\}\{中文关键词\}
+\item \verb|\abstractofenglish|\{英文摘要内容\}\{中文关键词\}
+\item \verb|\thanking|\{致谢内容\}
+\item \verb|\forthsection|\{四级标题文字\}
+\end{itemize}
+}
+下面再来举个例子，如下面的这些命令，就可以分别产生本文档前面的中文标题、摘要和英文标题、摘要。
+
+{\color{green!50!black}
+\begin{lstlisting}[breaklines=true,]
+\maketitleofchinese{南京信息工程大学本科生毕业论文\LaTeX 模板V2021.6\footnote{本模板制作时间：2014年5月，修订于2021年6月}}{路人甲}{\LaTeX }
+
+\abstractofchinese{这是一份南京信息工程大学本科生毕业论文\LaTeX 模板。友善提醒：本文档是非官方版，属个人兴趣产物。}{模板；南信大；毕业论文；}
+    
+\maketitleofenglish{\LaTeX\ Template for Undergraduate Thesis of Nanjing University of Information Science and Technology}{Some Guy}{School of \LaTeX}
+    
+\abstractofenglish{This is a \LaTeX{~}template for the Undergraduate thesis of Nanjing University of Information Science and Technology. Caution: due to personal interest, not an official template.}{template；NUIST；thesis;}
+\end{lstlisting}
+}
+
+\subsubsection{不带参命令用法}
+不带参命令\verb|\mytableofcontents| 用来生成目录。只需原封不动的打出相应命令，编译就会自动执行相应的排版操作，如用\verb|\mytableofcontents|就可以在命令的位置生成目录页。

@@ -1,0 +1,61 @@
+\section{排版参考文献及引用}
+\subsection{使用bibliography排版参考文献}
+编写参考文献一章是个很无聊的工作，且工作量不小。使用“GB/T 7714—2015 BibTeX Style”排版参考文献可以省去模板用户研究参考文献排版规范的时间。尽管知网提供GB/T 7714—2015格式引文，但是知网提供的引文其实存在一个小问题：标点后没有空格，需要我们自行添加空格（知网外文文献提供的可供复制的引文做的更差，居然敢说是GB/T 7714—2015格式的……）。至于外文文献，引文基本上需要我们对照规范自行编辑。将参考文献排版工作交给程序，将我们解放从这个无聊且耗时的工作中解放出来。
+
+模板用户需要编辑bibliography.bib文件，填写参考文献的各项属性，如title、author、year等，具体请参考\url{https://github.com/CTeX-org/gbt7714-bibtex-style#%E6%96%87%E7%8C%AE%E7%B1%BB%E5%9E%8B}。其实bib文件的生成工作也可以交给文献管理软件，进一步实现参考文献管理自动化。
+
+bib文件示例：
+{\color{green!50!black}
+\begin{lstlisting}[breaklines=true,]
+    @online{x1,
+    title = {The Not So Short Introduction to LaTeX2e},
+    year = {2021},
+    author = {Tobias, O and Hubert, P and Irene, H and Elisabeth, S},
+    url = {http://tug.ctan.org/info/lshort/english/lshort.pdf},
+    urldate = {2021-06-05},
+    langid = {english},
+  }
+  
+  @book{x2,
+    title = {LaTeX2e 及常用宏包使用指南},
+    author = {李平},
+    date = {2004},
+    publisher = {{清华大学出版社}},
+    location = {{北京}},
+    langid = {中文;}
+  }
+\end{lstlisting}
+}
+示例中的x1、x2为参考文献的标识符，可以随意设定，在正文中使用\verb|\cite{x1}|命令即可实现文献交叉引用。
+
+bib文件编辑完成后，用户需要依次进行下面四个操作：编译文档、在命令行环境执行bibtex命令、编译文档、编译文档。在Visual Studio Code中操作为：
+\begin{enumerate}[1、]
+    \item 点击\TeX 插件中的“Build LaTeX project”
+    \item 在VSC的TERMINAL中执行“bibtex 文件名.aux”，如“bibtex NUIST\_thesis.aux”
+    \item 点击\TeX 插件中的“Build LaTeX project”
+    \item 点击\TeX 插件中的“Build LaTeX project”
+\end{enumerate}
+如果想了解原理，请参见\url{https://liam.page/2016/01/23/using-bibtex-to-generate-reference/}。用户也可以自行为\TeX 插件添加新的Recipe，一键完成编译。
+
+若参考文献发生变更，或是编译发生错误，用户需要重新执行以上操作。
+
+学校规定的参考文献排版规范有一点与国标不同：我校要求英文人名仅首字母大写。这要求模板用户在执行bibtex命令后，修改生成的bbl文件，将其中的英文人名改为符合我校要求的首字母大写、其余字母小写。
+
+\subsection{（已弃用）thebibliography环境排版参考文献}
+注释掉nuist.cls文件的第50行至第52行，并取消注释第55行至第57行，来启用thebibliography。
+
+使用thebibliography环境来排版参考文献，代码如下：
+{\color{green!50!black}
+\begin{lstlisting}[breaklines=true,]
+\begin{thebibliography}{99}\setlength{\itemsep}{-0.1mm}
+\begin{spacing}{1.2}
+\zihao{-5}
+\bibitem{x1}The Not So Short Introduction to 
+\LaTeX2e \ by Tobias Oetiker, Hubert Partl, Irene Hyna and Elisabeth Schlegl.
+\bibitem{x0}李平．\LaTeX2e 及常用宏包使用指南[M]．清华大学出版社，2004．
+\bibitem{x3}罗振东，葛向阳．排版软件\LaTeX 简明手册[M]．第二版．北京：电子工业出版社，2003．
+\end{spacing}
+\end{thebibliography}
+\end{lstlisting}
+}
+引用文献条目时使用\verb|\ucite{}|命令，例如代码\verb|\ucite{x1}|和\verb|\ucite{x2}|就可以产生\cite{x1}和\cite{x2}上标。

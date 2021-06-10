@@ -1,0 +1,21 @@
+\section{排版数学公式}
+\LaTeX 强大之处就在于其有很强的数学公式排版能力，如果再加上amsmath宏包，更是如虎添翼。其中\$  \$表示行内公式，如\verb|$a^2+b^2=c^2$|会生成$a^2+b^2=c^2$，而\$\$  \$\$表示行间公式，其实这还不算什么,最重要的是即使处理高度比较高的行间公式时，\LaTeX 也会自动处理而不会使文章中的行距突兀地增大，如$x_{1,2}= \frac{-b\pm \sqrt{b^2-4ac}}{2a}$,而命令\verb|$$a^2+b^2=c^2$$|,会产生$$a^2+b^2=c^2$$
+上面的就是一个行间公式。
+\begin{equation}\label{fomula}
+\begin{cases}
+
+
+\dfrac{du}{dt}=-\dfrac{\partial \phi}{\partial x}+fv\\[1.5ex]
+\dfrac{dv}{dt}=-\dfrac{\partial \phi}{\partial y}-fu\\[1.5ex]
+\dfrac{\partial \phi}{\partial p}=-\dfrac{1}{\rho}\\[1.5ex]
+p= \rho RT\\[1.5ex]
+
+\dfrac{\partial u}{\partial x}+\dfrac{\partial v}{\partial y}+
+\dfrac{\partial \omega}{\partial p}=0\\[1.5ex]
+\dfrac{\partial T}{\partial t}+\overrightarrow{V}\times \nabla_pT-(\Gamma_d-\Gamma)\omega=\dfrac{Q}{c_p}
+\end{cases}
+\end{equation}
+
+式~\ref{fomula}~中为气象上常用的大气运动基本方程组，而且这是一个带编号的公式。
+
+公式排版就简单介绍到这里吧，因为对笔者所学的专业来说，论文中很少涉及这方面内容，当然个别研究领域可能会出现许多公式，那就是比较高深的领域了，一般是做动力机理或数值模拟研究时常会用到公式，如果有兴趣可以参见\cite{x1}。

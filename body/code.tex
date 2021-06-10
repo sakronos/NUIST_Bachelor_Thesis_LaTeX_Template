@@ -1,0 +1,19 @@
+\section{排版代码}
+
+本模板使用listings宏包排版代码，效果如下：
+\begin{lstlisting}[breaklines=true,language=Python]
+    # Hello World!
+    print('Hello World!')
+\end{lstlisting}
+
+其实现代码如下：
+\begin{tcblisting}{listing only,boxrule=-1pt,colback=white}
+\begin{lstlisting}[breaklines=true,language=Python]
+    # Hello World!
+    print('Hello World!')
+\end{lstlisting}
+\end{tcblisting}
+
+如果代码中注释有中文，\XeLaTeX{} 会警告系统中的仿宋字体不支持斜体，这个问题有待解决。
+
+listings支持的语言相对有限，如果需要更好的语法高亮效果，可以考虑使用minted宏包。模板目前尚未实装该宏包，感兴趣的话可以参考\url{https://zhuanlan.zhihu.com/p/348850937}。

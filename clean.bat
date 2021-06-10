@@ -1,0 +1,10 @@
+del ctextemp_*.* /s
+del ctextemp_*.*.* /s
+del *.*.bak /s
+del *.log /s
+del *.aux /s
+del *.toc /s
+del *.dvi /s
+del *.thm /s
+del *.out /s
+del *.gz /s

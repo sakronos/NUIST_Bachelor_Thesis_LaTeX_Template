@@ -1,0 +1,42 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Tobias et~al.(2021)Tobias, Hubert, Irene, and Elisabeth]{x1}
+Tobias~O, Hubert~P, Irene~H, et~al.
+\newblock The not so short introduction to latex2e[EB/OL].
+\newblock 2021\allowbreak[2021-06-05].
+\newblock \url{http://tug.ctan.org/info/lshort/english/lshort.pdf}.
+
+\bibitem[{CTeX-org}(2021{\natexlab{a}})]{x5}
+{CTeX-org}.
+\newblock CTEX宏集手册[EB/OL].
+\newblock \allowbreak(2021-03-14)\allowbreak[2021-06-05].
+\newblock \url{http://mirrors.ctan.org/language/chinese/ctex/ctex.pdf}.
+
+\bibitem[{CTeX-org}(2021{\natexlab{b}})]{x6}
+{CTeX-org}.
+\newblock Ctex-org/gbt7714-bibtex-style[CP/OL].
+\newblock \allowbreak(2021-05-08)\allowbreak[2021-06-05].
+\newblock \url{https://github.com/CTeX-org/gbt7714-bibtex-style}.
+
+\bibitem[李平(2004)]{x2}
+李平.
+\newblock LaTeX2e 及常用宏包使用指南[M].
+\newblock {北京}: {清华大学出版社}, 2004.
+
+\bibitem[刘海洋(2013)]{x4}
+刘海洋.
+\newblock LaTeX 入门[M].
+\newblock {北京}: {电子工业出版社}, 2013.
+
+\end{thebibliography}

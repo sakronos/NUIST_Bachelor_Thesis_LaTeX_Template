@@ -1,0 +1,32 @@
+\section{排版表格}
+\LaTeX 中生成简单的表格还是比较方便的，可以用tabular 环境来实现。下面就来做一个论文中经常用到的三线表,如表~\ref{table_1}~。
+
+\begin{table}[htbp!]
+\centering
+\caption{本模板中部分使用的宏包及功能}\label{table_1}
+
+\begin{tabular}{ccccccccc}
+\whline 
+宏包名称 & amsmath&caption&geometry&ulem&xcolor&setspace&hyperref \\ 
+\hline 
+作用 & 数学公式&定制标题&页面设置&下划线&颜色&行距&超链接 \\ 
+\whline 
+\end{tabular}
+\end{table}
+
+其实现代码如下：
+{\color{green!50!black}
+\begin{lstlisting}[breaklines=true,]
+\begin{table}[htbp!]
+\caption{本模板中所用的宏包及功能}\label{table_1}
+\begin{tabular}{ccccccccc}
+\whline 
+宏包名称 & amsmath&caption2&geometry&ulem&xcolor&setspace&hyperref&titletoc \\ 
+\hline 
+作用 & 数学公式&定制标题&页面设置&下划线&颜色&行距&超链接&目录样式 \\ 
+\whline 
+\end{tabular}
+\end{table}
+\end{lstlisting}
+}
+如果表格比较长，那就要用到跨页表格排版宏包longtable了（模板中已引入该宏包）。基本的表格排版情况就介绍这么多，大家感兴趣自己慢慢去探索吧。
