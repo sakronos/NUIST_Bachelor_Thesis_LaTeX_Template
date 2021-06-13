@@ -112,10 +112,11 @@
 
 %致谢标题
 \newcommand{\thanking}[1]{
-	\newpage
+	\clearpage
 	\begin{center}
 		\zihao{4} \heiti 致谢
 	\end{center}
+	\phantomsection
 	\addcontentsline{toc}{section}{致谢}
 	\vspace{1.6em} \par
 	\zihao{5}\kaishu #1
@@ -123,10 +124,7 @@
 %参考文献
 \renewcommand{\refname}
 {
-	% 空2行
-	\newline
-	\newline
-	\zihao{4} \heiti 参考文献：
+	\section*{参考文献：}
 }
 
 %四级标题，不显示在目录中，需要自行添加标题编号，如：（1）
