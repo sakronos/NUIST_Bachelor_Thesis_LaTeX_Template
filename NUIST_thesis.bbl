@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -38,5 +38,12 @@ Tobias~O, Hubert~P, Irene~H, et~al.
 刘海洋.
 \newblock LaTeX 入门[M].
 \newblock {北京}: {电子工业出版社}, 2013.
+
+\bibitem[{給}(2021)]{geiNanJingXinXiGongChengDaXueLaTeXBiYeLunWenMoBanV31GengXinWuXuYiLaiCTeXRuanJian2021}
+{給}.
+\newblock {{南京信息工程大学LaTeX毕业论文模板V3}}.1更新
+  ({{无需依赖CTeX软件}}，修复了复制文字乱码的问题）[EB/OL].
+\newblock \allowbreak(2021-05-14)\allowbreak[2021-06-13].
+\newblock \url{https://latexstudio.net/index/details/index/mid/1524.html}.
 
 \end{thebibliography}
