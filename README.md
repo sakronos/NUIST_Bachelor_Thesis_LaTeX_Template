@@ -1,7 +1,7 @@
 # 南京信息工程大学本科生毕业论文 LaTeX 模板 
-版本：2021.6
+版本：2021.6.1
 
-这是一份南京信息工程大学本科生毕业论文LaTeX模板，请使用XeLaTeX编译。**友善提醒：本文档是非官方版**
+这是一份南京信息工程大学本科生毕业论文LaTeX模板，请使用XeLaTeX编译。**提醒：本文档是非官方版**
 
 本Repository是对[NUIST_thesis_template_V2.0](https://github.com/LirenW/NUIST_thesis_template_V2.0)进行修订。
 
