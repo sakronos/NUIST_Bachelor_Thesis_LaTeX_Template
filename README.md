@@ -30,7 +30,7 @@
 ```
 
 ## 更新日志
-> version 2021.6
+> * version 2021.6
 > > 1. 调整了几处字体大小
 > > 2. 将图片、表格、公式设置为按章编号
 > > 3. 添加了声明页
@@ -41,6 +41,11 @@
 > > 8. 更新\verb|\thanking|命令，添加\verb|\forthsection|命令
 > > 9. 将\verb|\linespread|设置为1.335，以得到更接近MS Word下多倍行距1.25的效果
 > > 10. 图片编号与图片标题间的分隔符设置为空格
+> * version 2021.6.1
+> > 1. 尝试修复参考文献和致谢页的跳转问题
+
+## TODO
+- [ ] 比较bibtex与biblatex，可能使用biblatex替换bibtex
 
 ## 致谢
 1. [南京信息工程大学本科学位论文模板](https://github.com/LirenW/NUIST_thesis_template_V2.0)
