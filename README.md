@@ -38,8 +38,8 @@
 > > 5. 使用GB/T 7714—2015 BibTeX Style排版参考文献
 > > 6. 限定模板使用的字体为SimSun、SimHei、SimKai和Times New Roman
 > > 7. 替换已弃用的宏包和命令
-> > 8. 更新\verb|\thanking|命令，添加\verb|\forthsection|命令
-> > 9. 将\verb|\linespread|设置为1.335，以得到更接近MS Word下多倍行距1.25的效果
+> > 8. 更新\thanking命令，添加\forthsection命令
+> > 9. 将\linespread设置为1.335，以得到更接近MS Word下多倍行距1.25的效果
 > > 10. 图片编号与图片标题间的分隔符设置为空格
 > * version 2021.6.1
 > > 1. 尝试修复参考文献和致谢页的跳转问题
