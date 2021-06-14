@@ -15,7 +15,7 @@
 │  bibliography.bib                                     # 使用BibTeX格式化的参考列表
 │  clean.bat                                            
 │  LICENSE                                              
-│  nuist.cls                                            # 样式文件x
+│  nuist.cls                                            # 样式文件
 │  NUIST_thesis.bbl
 │  NUIST_thesis.listing
 │  NUIST_thesis.pdf
