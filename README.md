@@ -43,9 +43,14 @@
 > > 10. 图片编号与图片标题间的分隔符设置为空格
 > * version 2021.6.1
 > > 1. 尝试修复参考文献和致谢页的跳转问题
+> * 2021/10/28
+> > 1. 修改TODO，并补充使用bibliography的注意事项
+> > 2. （被导师要求重新检查文档格式了……好久没用LaTeX，有改出问题来的预感＞﹏＜）
 
 ## TODO
 - [ ] 比较bibtex与biblatex，可能使用biblatex替换bibtex
+- [ ] 修改模板名字为nuistbachelor
+- [ ] 根据***毕业论文自查要求.docx***，注释号采用六角括号，例如**1〕**
 
 ## 致谢
 1. [南京信息工程大学本科学位论文模板](https://github.com/LirenW/NUIST_thesis_template_V2.0)

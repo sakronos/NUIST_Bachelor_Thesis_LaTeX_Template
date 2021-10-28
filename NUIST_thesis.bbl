@@ -12,37 +12,37 @@
 \fi
 
 \bibitem[Tobias et~al.(2021)Tobias, Hubert, Irene, and Elisabeth]{x1}
-Tobias~O, Hubert~P, Irene~H, et~al.
-\newblock The not so short introduction to latex2e[EB/OL].
+TOBIAS O, HUBERT P, IRENE H, et~al.
+\newblock The not so short introduction to latex2e\allowbreak[EB/OL].
 \newblock 2021\allowbreak[2021-06-05].
 \newblock \url{http://tug.ctan.org/info/lshort/english/lshort.pdf}.
 
 \bibitem[{CTeX-org}(2021{\natexlab{a}})]{x5}
 {CTeX-org}.
-\newblock CTEX宏集手册[EB/OL].
+\newblock CTEX宏集手册\allowbreak[EB/OL].
 \newblock \allowbreak(2021-03-14)\allowbreak[2021-06-05].
 \newblock \url{http://mirrors.ctan.org/language/chinese/ctex/ctex.pdf}.
 
 \bibitem[{CTeX-org}(2021{\natexlab{b}})]{x6}
 {CTeX-org}.
-\newblock Ctex-org/gbt7714-bibtex-style[CP/OL].
+\newblock Ctex-org/gbt7714-bibtex-style\allowbreak[CP/OL].
 \newblock \allowbreak(2021-05-08)\allowbreak[2021-06-05].
 \newblock \url{https://github.com/CTeX-org/gbt7714-bibtex-style}.
 
 \bibitem[李平(2004)]{x2}
 李平.
-\newblock LaTeX2e 及常用宏包使用指南[M].
+\newblock LaTeX2e 及常用宏包使用指南\allowbreak[M].
 \newblock {北京}: {清华大学出版社}, 2004.
 
 \bibitem[刘海洋(2013)]{x4}
 刘海洋.
-\newblock LaTeX 入门[M].
+\newblock LaTeX 入门\allowbreak[M].
 \newblock {北京}: {电子工业出版社}, 2013.
 
 \bibitem[{給}(2021)]{geiNanJingXinXiGongChengDaXueLaTeXBiYeLunWenMoBanV31GengXinWuXuYiLaiCTeXRuanJian2021}
 {給}.
 \newblock {{南京信息工程大学LaTeX毕业论文模板V3}}.1更新
-  ({{无需依赖CTeX软件}}，修复了复制文字乱码的问题）[EB/OL].
+  ({{无需依赖CTeX软件}}，修复了复制文字乱码的问题）\allowbreak[EB/OL].
 \newblock \allowbreak(2021-05-14)\allowbreak[2021-06-13].
 \newblock \url{https://latexstudio.net/index/details/index/mid/1524.html}.
 
