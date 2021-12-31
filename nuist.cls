@@ -47,9 +47,9 @@
 %设置引用格式
 \RequirePackage{ulem}
 % GB/T 7714-2015 使用形如\bibliography{20171344016_graduation_thesis}的命令引入.bib文件
-\usepackage{gbt7714}
+\usepackage{gbt7714}[numerical]
 \renewcommand*{\bibfont}{\zihao{-5}}
-\bibliographystyle{gbt7714-numerical}%GBT7714 顺序编码制
+% \bibliographystyle{gbt7714-numerical}%GBT7714 顺序编码制
 
 %第一版使用的thebibliography环境排版参考文献
 %\usepackage[numbers,sort&compress]{natbib}
