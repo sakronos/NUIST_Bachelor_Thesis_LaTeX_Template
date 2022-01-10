@@ -3,5 +3,7 @@
 *.blg
 *.log
 *.out
-*.synctex.gz
+*.synctex*
 *.toc
+
+~$*

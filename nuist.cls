@@ -47,9 +47,9 @@
 %设置引用格式
 \RequirePackage{ulem}
 % GB/T 7714-2015 使用形如\bibliography{20171344016_graduation_thesis}的命令引入.bib文件
-\usepackage{gbt7714}[numerical]
+\usepackage{gbt7714}
 \renewcommand*{\bibfont}{\zihao{-5}}
-% \bibliographystyle{gbt7714-numerical}%GBT7714 顺序编码制
+\bibliographystyle{gbt7714-2005-numerical}%GBT7714 顺序编码制
 
 %第一版使用的thebibliography环境排版参考文献
 %\usepackage[numbers,sort&compress]{natbib}
@@ -232,34 +232,31 @@
 \begin{titlepage}
 \begin{center}
 \vspace*{1.2cm}
-\includegraphics[scale=1]{nuist_logo//nuist.pdf}
+\includegraphics[scale=1]{nuist_logo/nuist.pdf}
 
 \vspace*{1cm}
-\hspace{4ex}\heiti\zihao{-1}本科生毕业论文(设计)\\
+\heiti\zihao{-1}本科生毕业论文(设计)\\
 \vspace*{0.6cm}
-\includegraphics[scale=1]{nuist_logo//xiaohui.jpg}
+\includegraphics[scale=1]{nuist_logo/xiaohui.jpg}
 
 \vspace*{1.6cm}
-\zihao{3}{\bfseries \songti \hspace*{.3cm}题~~~~目~~~~\uline{\raisebox{-1ex}{\parbox[b]{120mm}{\begin{center}
-#1
-\end{center}}}
-}\hfill}
+\zihao{3}{\bfseries \songti \hspace*{.3cm}题~~~~目~~~~\uline{\parbox[b]{120mm}{\center{#1}}}\hfill}
 
 
 \vspace*{2.4cm}
-\zihao{-3}\songti\hspace*{2.3cm}学生姓名\uline{\makebox[58mm]{#2}}\hfill
+\zihao{-3}\songti{学生姓名}\uline{\parbox[b]{58mm}{\center{#2}}}\hfill
 
 \vspace*{1.6mm}
-\zihao{-3}\songti\hspace*{2.3cm}学~~~~~~~号\uline{\makebox[58mm]{#3}}\hfill
+\zihao{-3}\songti{学~~~~~~~~号}\uline{\parbox[b]{58mm}{\center{#3}}}\hfill
 
-\vspace*{1.6mm}
-\zihao{-3}\songti\hspace*{2.3cm}学~~~~~~~院\uline{\makebox[58mm]{#4}}\hfill
+\vspace*{1.0mm}
+\zihao{-3}\songti{学~~~~~~~~院}\uline{\parbox[b]{58mm}{\center{#4}}}\hfill
 
-\vspace*{1.6mm}
-\zihao{-3}\songti\hspace*{2.3cm}专~~~~~~~业\uline{\makebox[58mm]{#5}}\hfill
+\vspace*{1.0mm}
+\zihao{-3}\songti{专~~~~~~~~业}\uline{\parbox[b]{58mm}{\center{#5}}}\hfill
 
-\vspace*{1.6mm}
-\zihao{-3}\songti\hspace*{2.3cm}指导教师\uline{\makebox[58mm]{#6}}\hfill
+\vspace*{1.0mm}
+\zihao{-3}\songti{指导教师}\uline{\parbox[b]{58mm}{\center{#6}}}\hfill
 
 
 \vspace*{20mm}
