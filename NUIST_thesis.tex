@@ -4,8 +4,17 @@
 
 \begin{document}
 
-\cover{南京信息工程大学本科生毕业论文\LaTeX 模板 \\Version $2021.6$}
-{路人甲}{20170000888}{\LaTeX 学院}{某专业}{路人乙}{二Ｏ二一\hspace{0.4em} 年\hspace{0.4em} 六\hspace{0.4em} 月\hspace{0.4em} 五\hspace{0.4em} 日}    %2021年论文格式要求指导老师不用加职称
+%%% 论文封面
+% WARN: 请检查校徽是否为最新版，若不是最新版，请在 nuist_logo 文件夹中替换
+% TIPS: 若标题、学院、专业名太长，可使用 \\ 进行换行，如 计算机学院、软件学院、\\网络空间安全学院
+% TIPS: 若不允许换行，请在 nuist.cls 文件中查找“封面”部分，并将 \parbox[b]{58mm} 中的58改为更大的数字
+% TIPS: 2021年论文格式要求指导老师不用加职称
+\cover{南京信息工程大学本科生毕业论文\LaTeX 模板 \\Version $2022$}
+{路人甲}{20170000888}{\LaTeX 学院}{某专业}{路人乙}{二Ｏ二二\hspace{0.4em} 年\hspace{0.4em} 一\hspace{0.4em} 月\hspace{0.4em} 十\hspace{0.4em} 日}
+%%% 论文封面
+
+%%% 正文部分
+% TIPS: 可以为每一章节在 body 文件夹内创建一个 .tex 文件，并以下述方式引入，也可以直接写在本文件中（不推荐）
 \input{body/front.tex}
 \input{body/intro.tex}
 \input{body/nuistcommand.tex}
@@ -14,8 +23,7 @@
 \input{body/table.tex}
 \input{body/code.tex}
 \input{body/ref.tex}
-
-
+%%% 正文部分
 
 \section{写在后面(第一版作者)}
 
@@ -29,17 +37,23 @@
 
 \input{body/2nd.tex}
 \input{body/2021.6.tex}
+\input{body/2022.tex}
+
+%%% 参考文献
 \input{body/bib.tex}
+%%% 参考文献
 
 
+%%% 致谢
 \thanking
 {
     感谢春风之骀荡，感谢细雨之无声，感谢花枝之袅娜，感谢土地之坚忍。
 
     \vspace{5em}
     {\color{red}
-    \heartpar{鉴于您已经读到这里，噢，也可能是用鼠标拖到这里的，但这不是什么大不了的区别，重要的是您手指或者眼睛一定有一些疲倦了吧？ 这段文字能与您相遇，笔者心里已经满是感激，为了表达这样的心情，特奉上红心一颗，望看官笑纳！ -- Lee贰零壹肆年伍月叁日于南京}
+        \heartpar{鉴于您已经读到这里，噢，也可能是用鼠标拖到这里的，但这不是什么大不了的区别，重要的是您手指或者眼睛一定有一些疲倦了吧？ 这段文字能与您相遇，笔者心里已经满是感激，为了表达这样的心情，特奉上红心一颗，望看官笑纳！ -- Lee贰零壹肆年伍月叁日于南京}
     }
 }
+%%% 致谢
 
 \end{document}
