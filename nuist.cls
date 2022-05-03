@@ -2,8 +2,8 @@
 \ProvidesClass{nuist}
 \LoadClass[a4paper,zihao=5,UTF8]{ctexart} % 基于LaTeX的标准文档类型ctexart
 
-\usepackage{xeCJK}      % 中文支持
-\usepackage{ulem}       % 文字下划线等样式
+\usepackage{xeCJK} % 中文支持
+\usepackage{ulem}  % 文字下划线等样式
 
 % 页边距
 \usepackage{geometry}
@@ -58,22 +58,22 @@
 
 % 图
 \usepackage{graphicx}
-\graphicspath{{./figs/color/}}		% 图片默认文件夹
+\graphicspath{{./figs/color/}} % 图片默认文件夹
 % 子图
 \usepackage{subfigure}
 \renewcommand{\thesubfigure}{（\alph{subfigure}）}
 % 将子图序号设置为（a）
 
 % 表
-\usepackage{booktabs}	            % 设置表格样式，可使用“三线表”
-\usepackage{multirow}	            % 表格合并单元格
-\usepackage{longtable}              % 跨页表格
-\renewcommand{\arraystretch}{1.5}   % 表格行距
+\usepackage{booktabs}             % 设置表格样式，可使用“三线表”
+\usepackage{multirow}             % 表格合并单元格
+\usepackage{longtable}            % 跨页表格
+\renewcommand{\arraystretch}{1.5} % 表格行距
 
 % 公式
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{bm}	% 方便的公式加粗
+\usepackage{bm} % 方便的公式加粗
 
 % 公式序号使用中文括号
 \usepackage{mathtools}
@@ -100,15 +100,15 @@
 
 % 章节标题格式
 \ctexset {
-	section		  = {
-		format    = {\zihao{4} \heiti  \raggedright}
-	},
-    subsection	  = {
-		format    = {\zihao{5} \heiti  \raggedright}
-	},
+    section       = {
+        format    = {\zihao{4} \heiti  \raggedright}
+    },
+    subsection    = {
+        format    = {\zihao{5} \heiti  \raggedright}
+    },
     subsubsection = {
-		format    = {\zihao{5} \songti \raggedright}
-	},
+        format    = {\zihao{5} \songti \raggedright}
+    },
     paragraph     = {
         format    = {\zihao{5} \songti \raggedright},
         runin     = false,
@@ -141,10 +141,10 @@
 
 % 参考文献标题的格式
 \renewcommand{\refname}{
-	\vspace{2ex}
-	\section*{参考文献：}
-	\phantomsection
-	\addcontentsline{toc}{section}{参考文献}
+    \vspace{2ex}
+    \section*{参考文献：}
+    \phantomsection
+    \addcontentsline{toc}{section}{参考文献}
 }
 \renewcommand{\bibsection}{\refname}
 
@@ -171,33 +171,33 @@
 
             \vspace*{16mm}
             \zihao{3}{\bfseries \songti \hspace*{.3cm}题~~~~目~~~~}
-			\uline{\parbox[b]{120mm}{\center{\bfseries {#1}}}}
-			\hfill
+            \uline{\parbox[b]{120mm}{\center{\bfseries {#1}}}}
+            \hfill
 
             \vspace*{24mm}
             \zihao{-3}\songti{学生姓名}
-			\uline{\parbox[b]{58mm}{\center{#2}}}
-			\hfill
+            \uline{\parbox[b]{58mm}{\center{#2}}}
+            \hfill
 
             \vspace*{1.6mm}
             \zihao{-3}\songti{学~~~~~~~~号}
-			\uline{\parbox[b]{58mm}{\center{#3}}}
-			\hfill
+            \uline{\parbox[b]{58mm}{\center{#3}}}
+            \hfill
 
             \vspace*{1.0mm}
             \zihao{-3}\songti{学~~~~~~~~院}
-			\uline{\parbox[b]{58mm}{\center{#4}}}
-			\hfill
+            \uline{\parbox[b]{58mm}{\center{#4}}}
+            \hfill
 
             \vspace*{1.0mm}
             \zihao{-3}\songti{专~~~~~~~~业}
-			\uline{\parbox[b]{58mm}{\center{#5}}}
-			\hfill
+            \uline{\parbox[b]{58mm}{\center{#5}}}
+            \hfill
 
             \vspace*{1.0mm}
             \zihao{-3}\songti{指导教师}
-			\uline{\parbox[b]{58mm}{\center{#6}}}
-			\hfill
+            \uline{\parbox[b]{58mm}{\center{#6}}}
+            \hfill
 
             \vspace*{20mm}
             \bfseries\zihao{-2}{#7}
@@ -260,8 +260,8 @@
     \vspace*{0.3cm}
     \begin{center}
         \zihao{3}\heiti #1\\
-		[1em]\zihao{4}\songti #2\\
-		[0.8em]\zihao{-5} 南京信息工程大学#3学院，江苏\ 南京\ 210044
+        [1em]\zihao{4}\songti #2\\
+        [0.8em]\zihao{-5} 南京信息工程大学#3学院，江苏\ 南京\ 210044
     \end{center}
 }
 % 摘要页中文摘要
@@ -309,11 +309,11 @@
 \newcommand{\thanking}[1]{
     \clearpage
 
-	\begin{center}
+    \begin{center}
         \zihao{4} \heiti 致谢
     \end{center}
     \phantomsection
-	\addcontentsline{toc}{section}{致谢}
+    \addcontentsline{toc}{section}{致谢}
 
     \vspace{1.6em} \par
     \zihao{5}\kaishu #1
