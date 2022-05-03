@@ -2,7 +2,7 @@
 
 \subsection{支持图片格式}
 
-模板支持的图片格式有：jpg，pdf，eps，png等。
+模板支持的图片格式有：jpg，pdf，eps，png等。既然选择了 \LaTeX，那就尽量使用pdf，eps等矢量图。
 
 \subsection{插入图片方法}
 
@@ -30,7 +30,7 @@
 
 \subsection{并列图及添加子图标题}
 
-大家在做论文时的时候经常需要两幅图并排的情况，还记得在Word用鼠标一点点的拖动吗，通常拖到最后两幅图安排得还是不尽如人意，就算搞定了一组，下一组又要拖呀拉呀的。当然稍稍高明一点可以借助Word的宏命令来控制，但Word中宏的学习曲线十分的陡峭，大家在网上找到的宏，自己想重新定制一下，也是比较困难的。下面来看看\LaTeX 是怎样精确控制并排图片占位大小的，从而使其各占一半水平空间。如图~\ref{cn_map}~：
+大家在做论文时的时候经常需要两幅图并排的情况，下面来看看\LaTeX 是怎样精确控制并排图片占位大小的，从而使其各占一半水平空间。如图~\ref{cn_map}~：
 
 \begin{figure}[htbp!]
     \centering
@@ -53,7 +53,7 @@
 \end{lstlisting}
 }
 
-是不是感觉图~\ref{cn_map}~的标题不太专业，也想给左右两个子图各加一个标题？那其实也很简单，只要引入subfigure宏包就可以实现。实现后效果如图~\ref{subfig_cn_map}~：
+是不是感觉图~\ref{cn_map}~的标题不太专业，也想给左右两个子图各加一个标题？那其实也很简单，模板引入了subfigure宏包实现。实现后效果如图~\ref{subfig_cn_map}~：
 
 \begin{figure}[htbp!]
     \centering
@@ -71,8 +71,7 @@
 \begin{lstlisting}[breaklines=true,]
 \begin{figure}[htbp!]
     \centering
-    \subfigure[素颜\label{fig:sub1}]{\includegraphics[width=0.5\textwidth]{china1.png}
-    \subfigure[彩妆\label{fig:sub2}]{\includegraphics[width=0.5\textwidth]{china2.png}}
+    \subfigure[素颜\label{fig:sub1}]{\includegraphics[width=0.5\textwidth]{china1.png}}\subfigure[彩妆\label{fig:sub2}]{\includegraphics[width=0.5\textwidth]{china2.png}}
     \caption{中国地图展示}
     \label{subfig_cn_map}
 \end{figure}

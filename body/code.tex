@@ -1,5 +1,77 @@
 \section{排版代码}
 
+\subsection{排版算法伪代码}
+
+本模板引入了 algorithm 和 algorithmic 包排版伪代码，伪代码排版包有较多版本，具体可以参考 \url{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused#answer-230789}
+
+伪代码排版示例
+
+\begin{algorithm}[htbp]
+    \floatname{algorithm}{算法}                         % 将 Algorithm 替换为 算法
+    \renewcommand{\algorithmicrequire}{\textbf{输入：}} % 将 Require   替换为 输入
+    \renewcommand{\algorithmicensure}{\textbf{输出：}}  % 将 Ensure    替换为 输出
+    \caption{算法名}
+    \label{alg:algorithm}
+    \begin{algorithmic}[1] % [1] 使用行号
+      \REQUIRE 输入
+      \ENSURE 输出
+
+      \STATE 某种操作
+
+      \WHILE{while 循环控制}
+        \STATE 某种操作
+      \ENDWHILE
+
+      \FOR{for 循环控制}
+        \STATE 某种操作
+      \ENDFOR
+
+      \IF{if 条件控制}
+        \STATE 某种操作
+      \ELSE
+        \STATE 某种操作
+      \ENDIF
+
+      \STATE \textbf{return} 返回值
+    \end{algorithmic}
+\end{algorithm}
+
+代码
+
+\begin{lstlisting}[breaklines=true,]
+\begin{algorithm}[htbp]
+    \floatname{algorithm}{算法}                         % 将 Algorithm 替换为 算法
+    \renewcommand{\algorithmicrequire}{\textbf{输入：}} % 将 Require   替换为 输入
+    \renewcommand{\algorithmicensure}{\textbf{输出：}}  % 将 Ensure    替换为 输出
+    \caption{算法名}
+    \label{alg:algorithm}
+    \begin{algorithmic}[1] % [1] 使用行号
+      \REQUIRE 输入
+      \ENSURE 输出
+
+      \STATE 某种操作
+
+      \WHILE{while 循环控制}
+        \STATE 某种操作
+      \ENDWHILE
+
+      \FOR{for 循环控制}
+        \STATE 某种操作
+      \ENDFOR
+
+      \IF{if 条件控制}
+        \STATE 某种操作
+      \ELSE
+        \STATE 某种操作
+      \ENDIF
+
+      \STATE \textbf{return} 返回值
+    \end{algorithmic}
+\end{algorithm}
+\end{lstlisting}
+
+\subsection{排版实现代码}
+
 本模板使用listings宏包排版代码，效果如下：
 \begin{lstlisting}[breaklines=true,language=Python]
     # Hello World!

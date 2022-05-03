@@ -15,7 +15,7 @@
 \begin{enumerate}[1、]
     \item Windows 10
     \item TeX Live 最新发行版全量安装（2020和2021可以正常编译）
-    \item Visual Studio Code 和 Visual Studio Code LaTeX Workshop Extension (作者为 James Yu)
+    \item Visual Studio Code 和 Visual Studio Code LaTeX Workshop Extension（作者为 James Yu）
 \end{enumerate}
 
 请使用\XeLaTeX{} 编译本模板。如果在Visual Studio Code加插件环境下使用本模板，只需保留 NUIST\_thesis.tex 文件第一行“\% !TeX program  = XeLaTeX”，程序将使用XeLaTeX 命令排版文档。
@@ -24,19 +24,17 @@
 
 模板使用宋体、黑体、Times New Roman和楷体。根据2021.6版修订者的经历，建议使用Windows系统下的中易字库（SimSun、SimHei、SimKai）和Times New Roman。笔者一开始使用的是思源宋体（Source Han Serif），但论文打印稿被答辩老师一眼看出使用的不是常见的宋体……
 
-虽然Windows 系统自带的中易字库没有加粗字型，好在根据学校的要求，通篇论文只有封面页用到了加粗字型，所以用 AutoFakeBold 足矣。
+使用 AutoFakeBold 和 AutoFakeSlant 作为粗体和斜体。
 
 因此，笔者建议 Linux 用户和 Mac OS 用户请自行安装中易字库（Times New Roman 倒是很容易安装，Arch Linux下直接有包 \url{https://aur.archlinux.org/packages/ttf-ms-fonts/}），相信这对各位来说不是什么难事。
 
 \subsection{文档类的选取}
 
-模版的文档类是基于\CTeX{} 宏集中自带的ctexart文档类来实现的\cite{x5}，当然，还用到了一些常用的宏包，编译时要保证自己的系统中已经安装好了这些宏包，如果用户使用的是全量安装的 TeX Live就没有问题。
+模版的文档类是基于\CTeX{} 宏集中自带的ctexart文档类来实现的\cite{x5}，还用到了一些常用的宏包，编译时要保证自己的系统中已经安装好了这些宏包，如果用户使用的是全量安装的 TeX Live就没有问题。
 
 \subsection{参考文献编译方式}
 
-模板推荐使用\verb|\bibliography{}|命令处理参考文献，使用该方法可能比thebibliography难以上手些，但是借助“GB/T 7714—2015 BibTeX Style”\cite{x6}，模板使用者可以放心大胆地将参考文献的排版工作交给\LaTeX ，而无需手动调整每条参考文献的格式\footnote{虽然学校规范上写的是根据GB/T 7714—2005，但是\url{https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style}这个宏包使用起来有不少问题，而且需要自行安装。在2021.6版修订者的工作中发现GB/T 7714—2015 BibTeX Style能够胜任这个工作，因此选择这个宏包。}。
-
-考虑到使用者可能更习惯thebibliography，模板仍保留了之前版本的thebibliography代码，使用者需要将GB/T 7714-2015相关的代码删除，并取消thebibliography相关代码的注释以重新启用它。
+模板推荐使用\verb|\bibliography{}|命令处理参考文献，借助“GB/T 7714—2015 BibTeX Style”\cite{x6}，模板使用者可以放心大胆地将参考文献的排版工作交给\LaTeX ，而无需手动调整每条参考文献的格式，详见\ref{sec:ref}
 
 \section{模板中命令的使用方法}
 
@@ -49,11 +47,11 @@
     \caption{分级标题命令}
     \label{table_title_command}
     \begin{tabular}{ccccc}
-        \whline
-        命令 & \verb|\section| & \verb|\subsection| & \verb|\subsubsection| & \verb|\forthsection| \\
-        \hline
-        作用 & 一级标题        & 二级标题           & 三级标题              & 四级标题             \\
-        \whline
+        \toprule
+        命令 & \verb|\section| & \verb|\subsection| & \verb|\subsubsection| & \verb|\paragraph| \\
+        \midrule
+        作用 & 一级标题        & 二级标题           & 三级标题              & 四级标题          \\
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -73,10 +71,8 @@
     \item \verb|\abstractofchinses|，用于生成中文摘要；
     \item \verb|\abstractofenglish|，用于生成英文摘要；
     \item \verb|\thanking|，用于生成致谢部分的标题；
-    \item \verb|\forthsection|，生成四级标题，需要自行编号，形如（1）、（2）……（或1.1.1.1、2.1.1.1……）
 \end{enumerate}
 }
-
 
 \subsection{命令用法详解}
 
@@ -112,7 +108,6 @@
     \item \verb|\abstractofchinses|\{中文摘要内容\}\{中文关键词\}
     \item \verb|\abstractofenglish|\{英文摘要内容\}\{中文关键词\}
     \item \verb|\thanking|\{致谢内容\}
-    \item \verb|\forthsection|\{四级标题文字\}
 \end{itemize}
 }
 
@@ -127,7 +122,7 @@
     
 \maketitleofenglish{\LaTeX\ Template for Undergraduate Thesis of Nanjing University of Information Science and Technology}{Some Guy}{School of \LaTeX}
     
-\abstractofenglish{This is a \LaTeX{~}template for the Undergraduate thesis of Nanjing University of Information Science and Technology. Caution: due to personal interest, not an official template.}{template; NUIST; thesis;}
+\abstractofenglish{This is a \LaTeX{~}template for the Undergraduate thesis of Nanjing University of Information Science and Technology. Caution: due to personal interest, not an official template.}{template；NUIST；thesis；}
 \end{lstlisting}
 }
 

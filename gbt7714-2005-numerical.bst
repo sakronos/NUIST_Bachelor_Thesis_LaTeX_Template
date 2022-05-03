@@ -66,7 +66,7 @@ FUNCTION {load.config}
   #0 'year.after.author :=
   #1 'period.after.author :=
   #0 'italic.book.title :=
-  #1 'sentence.case.title :=
+  #0 'sentence.case.title :=
   #0 'link.title :=
   #1 'title.in.journal :=
   #1 'show.patent.country :=
