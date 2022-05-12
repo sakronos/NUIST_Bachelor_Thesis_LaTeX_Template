@@ -147,6 +147,7 @@
     \addcontentsline{toc}{section}{参考文献}
 }
 \renewcommand{\bibsection}{\refname}
+\setlength{\bibsep}{0.25em} % 缩小参考文献列表项间距
 
 %%%%%%%%%% 格式命令 %%%%%%%%%%
 % 封面
@@ -257,24 +258,25 @@
 % #3: 学院
 \newcommand{\maketitleofchinese}[3]{
     \newpage
-    \vspace*{0.3cm}
     \begin{center}
-        \zihao{3}\heiti #1\\
-        [1em]\zihao{4}\songti #2\\
-        [0.8em]\zihao{-5} 南京信息工程大学#3学院，江苏\ 南京\ 210044
+        \zihao{3} \heiti #1
+
+        \zihao{5} ~ \vspace*{0.8em}
+
+        \zihao{4} \songti #2 \vspace*{0.5em}
+
+        \zihao{-5} 南京信息工程大学#3学院，江苏\ 南京\ 210044
+        
+        \zihao{5} ~
     \end{center}
 }
 % 摘要页中文摘要
 % #1: 摘要
 % #2: 关键词
 \newcommand{\abstractofchinese}[2]{
-    \thispagestyle{empty}
-    \vspace*{-1em}
-    \begin{quotation}
-        \noindent \zihao{5} \heiti 摘要：\zihao{5}\kaishu{#1}
+    \noindent \zihao{5} \heiti 摘要：\zihao{5}\kaishu{#1}
 
-        \noindent \zihao{5} \heiti 关键词：\zihao{5}\kaishu{#2}
-    \end{quotation}
+    \noindent \zihao{5} \heiti 关键词：\zihao{5}\kaishu{#2}
 }
 
 % 摘要页英文标题
@@ -283,24 +285,25 @@
 % #3: 学院
 \newcommand{\maketitleofenglish}[3]{
     \newpage
-    \vspace*{0.3cm}
     \begin{center}
-        \zihao{3} \textbf{#1}\\[1em]
-        \zihao{4}#2\\[0.8em]
+        \zihao{3} \textbf{#1}
+
+        \zihao{5} ~ \vspace*{0.8em}
+
+        \zihao{4} #2 \vspace*{0.5em}
+
         \zihao{-5} #3，NUIST，Nanjing 210044，China
+
+        \zihao{5} ~
     \end{center}
 }
 % 摘要页英文摘要
 % #1: 摘要内容
 % #2: 关键词
 \newcommand{\abstractofenglish}[2]{
-    \thispagestyle{empty}
-    \vspace*{-1em}
-    \begin{quotation}
-        \noindent \zihao{5} \textbf{Abstract：} \zihao{5} #1
+    \noindent \zihao{5} \textbf{Abstract：} \zihao{5} #1
 
-        \noindent \zihao{5} \textbf{Key words：} \zihao{5} #2
-    \end{quotation}
+    \noindent \zihao{5} \textbf{Key words：} \zihao{5} #2
     \newpage
 }
 
