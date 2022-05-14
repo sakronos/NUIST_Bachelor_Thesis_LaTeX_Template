@@ -277,6 +277,7 @@
     \noindent \zihao{5} \heiti 摘要：\zihao{5}\kaishu{#1}
 
     \noindent \zihao{5} \heiti 关键词：\zihao{5}\kaishu{#2}
+    \songti \zihao{5}
 }
 
 % 摘要页英文标题
